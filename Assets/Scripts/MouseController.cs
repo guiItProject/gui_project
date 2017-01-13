@@ -40,7 +40,11 @@ public class MouseController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
+        if (coins % 20   == 0 && coins != 0 && lastCoins != coins)
+        {
+            forwardMovementSpeed += acceleration;
+            lastCoins = coins;
+        }
     }
 
     void FixedUpdate()
